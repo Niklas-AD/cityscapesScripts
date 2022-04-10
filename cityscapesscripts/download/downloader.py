@@ -20,7 +20,10 @@ def login():
     appauthor = 'cityscapes'
     data_dir = appdirs.user_data_dir(appname, appauthor)
     credentials_file = os.path.join(data_dir, 'credentials.json')
-
+    
+    #debugging
+    print(credentials_file)
+    
     if os.path.isfile(credentials_file):
         with open(credentials_file, 'r') as f:
             credentials = json.load(f)
