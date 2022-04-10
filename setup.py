@@ -25,10 +25,10 @@ if 'CYTHONIZE_EVAL' in os.environ:
     ext_modules = cythonize(pyxFile)
 
 with open("README.md") as f:
-    readme = f.read()
+    readme = f.read(encoding="utf-8")
 
 with open(os.path.join('cityscapesscripts', 'VERSION')) as f:
-    version = f.read().strip()
+    version = f.read(encoding="utf-8").strip()
 
 console_scripts = [
     'csEvalPixelLevelSemanticLabeling = cityscapesscripts.evaluation.evalPixelLevelSemanticLabeling:main',
