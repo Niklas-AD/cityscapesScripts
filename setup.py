@@ -24,10 +24,10 @@ if 'CYTHONIZE_EVAL' in os.environ:
                            "evaluation", "addToConfusionMatrix.pyx")
     ext_modules = cythonize(pyxFile)
 
-with open("README.md", encoding="utf-8) as f:
+with open("README.md", encoding="utf-8") as f:
     readme = f.read()
 
-with open(os.path.join('cityscapesscripts', 'VERSION'), encoding="utf-8) as f:
+with open(os.path.join('cityscapesscripts', 'VERSION'), encoding="utf-8") as f:
     version = f.read().strip()
 
 console_scripts = [
